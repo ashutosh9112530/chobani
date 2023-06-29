@@ -40,6 +40,11 @@ class orders extends cds.ApplicationService{
             let results = SELECT.from(orders);
             return results;
     })
+    this.on('READ','deleteData',async(req)=>{
+            await DELETE.from(orders).where({'order_name' : 'ParleG'});
+            let results = await SELECT.from(orders);
+            return results;
+    })
 
     await super.init();
     }
