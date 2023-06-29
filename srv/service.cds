@@ -17,6 +17,11 @@ service orders{
         order_name: String(50);
         order_price:Integer;
     }
+    entity deleteData{
+        order_id:Integer;
+        order_name: String(50);
+        order_price:Integer;
+    }
 
 }
 
